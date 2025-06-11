@@ -1,0 +1,20 @@
+/*
+ * File: public/css/data_atk_admin.css
+ * Deskripsi: Gaya CSS spesifik untuk halaman Data Barang Admin.
+ * Dimuat melalui @push('styles') di data_atk_admin.blade.php.
+ * SEMUA GAYA UMUM SUDAH ADA DI admin_common.css.
+ * HANYA TULIS GAYA YANG UNIK UNTUK HALAMAN INI DI SINI.
+ */
+
+/* Contoh: Jika Anda ingin header tabel Data ATK berbeda dari default common.css */
+/* .dashboard-box table#tabel-barang th {
+    background-color: #f0ad4e;
+    color: black;
+} */
+
+/* Contoh: Jika dropdown Kategori dan Satuan butuh style yang sangat spesifik berbeda dari .input-form select di common.css */
+/* #Kategori, #Satuan {
+    border: 2px solid green;
+} */
+
+/* Jika tidak ada style yang sangat spesifik dan unik, file ini boleh KOSONG. */

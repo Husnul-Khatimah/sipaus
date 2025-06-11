@@ -1,0 +1,39 @@
+/*
+ * File: public/css/pengambilan_pengguna.css
+ * Deskripsi: Gaya CSS spesifik untuk halaman Pengambilan Barang Pengguna.
+ * Dimuat melalui @push('styles') di pengambilan_pengguna.blade.php.
+ * SEMUA GAYA UMUM SUDAH ADA DI pengguna_common.css.
+ * HANYA TULIS GAYA YANG UNIK UNTUK HALAMAN INI DI SINI.
+ */
+
+/* Style khusus untuk tabel pengambilan jika override pengguna_common.css */
+.dashboard-box table th {
+    background-color: #ddd; /* Warna header tabel abu-abu (dari kode Anda) */
+    color: white;
+}
+
+/* Style khusus untuk textarea keterangan (jika ada) */
+.keterangan-textarea {
+    resize: vertical; /* Memungkinkan resize hanya vertikal */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    min-height: 80px; /* Tinggi minimal */
+    font-size: 14px;
+}
+
+/* Hapus SEMUA kode yang sudah ada di pengguna_common.css! */
+/* Ini termasuk:
+   * RESET DAN DASAR (*, body)
+   * SIDEBAR, brand, profile, menu, menu-item (dan turunannya)
+   * HEADER (dan turunannya)
+   * MAIN CONTENT (dan turunannya)
+   * DASHBOARD TABLE (kecuali th/td spesifik)
+   * BUTTONS (kecuali tombol yang namanya unik di halaman ini dan belum di-cover di common)
+   * TOGGLE SIDEBAR
+   * MODAL, modal-content, close (kecuali ID modal ini punya style unik yang tidak umum)
+   * FORM, input-form, input, btn-save (kecuali ID-ID ini punya style unik)
+   * NOTIFICATION
+   * LOGOUT POPUP
+   * Media queries umum (kecuali yang spesifik untuk elemen ini)
+*/

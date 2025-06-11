@@ -1,0 +1,366 @@
+    /* Reset CSS */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Body Setup */
+    body {
+        background-color: white;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column; /* Mengubah layout body menjadi kolom */
+        font-size: 13px; /* <-- Tambahan ini */
+    }
+
+    /* Sidebar Styling */
+    .sidebar {
+        width: 200px;
+        background-color: #ffffff;
+        color: white;
+        padding: 15px 0px 15px 0px; 
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        z-index: 1000;
+        transition: width 0.3s ease;
+        overflow: hidden;
+        /* overflow-y: auto; Mengaktifkan scroll pada sidebar */
+        
+    }
+
+    .sidebar.collapsed {
+        width: 10px;
+    }
+
+    .sidebar.collapsed .brand,
+    .sidebar.collapsed .profile {
+        display: none;
+    }
+
+
+    .brand {
+        padding: 5px;
+        background-color: #f1c40f;
+        position: absolute;
+        left: 35px;
+        bottom:1px;
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        
+    }
+
+    .profile {
+        text-align: center;
+        padding: 30px 20px;
+        border-bottom: 1px solid #374151;
+        color: #000;
+        background-color: #ddd;
+    }
+
+    .profile.collapsed div {
+        display: none;
+    }
+
+    .profile-img {
+        background-color: #facc15;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin: 0 auto 10px;
+    }
+
+    .menu {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-item {
+        padding: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: rgb(0, 0, 0); /* Tambahkan baris ini */
+        text-decoration: none; 
+    }
+
+    .menu-item:hover {
+        background-color: #444;
+    }
+
+    .menu-item span {
+        display: inline-block;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Menampilkan ikon saja saat sidebar dikecilkan */
+    .sidebar.collapsed .menu-item i {
+        font-size: 13px;
+    }
+
+    .sidebar.collapsed .menu-item span {
+        display: none;
+    }
+
+    /* Menyelaraskan ikon saat sidebar kecil */
+    .sidebar.collapsed .menu-item {
+        justify-content: center;
+    }
+    .menu {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .menu-item {
+        padding: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .menu-item:hover {
+        background-color: #D3D3D3;
+    }
+
+    .menu-item.active {
+        background-color: #D3D3D3;
+        ;
+    }
+
+
+    /* Main Content Styling */
+    .main-content {
+        margin-left: 190px; /* Memberi ruang agar konten tidak tertutup sidebar */
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto; /* Membuat area konten utama scrollable */
+        padding: 20px;
+        background-color: #f5f5f5;
+        height: 100vh; /* Agar tinggi konten sama dengan tinggi viewport */
+        padding-top: 70px; /* Memberikan ruang untuk header yang tetap */
+    }
+
+    /* Header Styling */
+    .header {
+        background-color: #3e84fd;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        position: fixed; /* Membuat header tetap di atas */
+        top: 0;
+        left: 0;
+        z-index: 1000; /* Membuat header di atas konten lainnya */
+    }
+
+    /* Dashboard Styling */
+    .dashboard-box {
+        background-color: white;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        overflow-x: auto;
+    }
+
+    /* Tabel Responsif */
+    .dashboard-box table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 600px;
+    }
+
+    .dashboard-box th, .dashboard-box td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    .dashboard-box th {
+        background-color: #ddd;
+        color: white;
+    }
+
+    @media (max-width: 768px) {
+        .dashboard-box table {
+            font-size: 14px;
+        }
+
+        .dashboard-box th, .dashboard-box td {
+            padding: 8px;
+        }
+    }
+
+    .btn-view {
+        background-color: #27ae60;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btn-view:hover {
+        background-color: #2ecc71;
+    }
+
+    .toggle-btn {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .sidebar.collapsed {
+        width: 40px;
+        transition: width 0.3s ease;
+    }
+
+    .main-content.expanded {
+        margin-left: 40px;
+        transition: margin-left 0.3s ease;
+    }
+
+    .profile.collapsed {
+        display: none;
+    }
+
+    .btn-edit {
+        background-color: #3498db; /* Biru */
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 3px;
+        margin-right: 5px;
+    }
+
+    .btn-hapus {
+        background-color: #ff3c27; /* Merah */
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 3px;
+        margin-right: 5px;
+    }
+
+    .btn-proses {
+        background-color: #e67e22; /* Oranye */
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 3px;
+    }
+
+    .btn-edit:hover {
+        background-color: #2980b9;
+    }
+
+    .btn-hapus:hover {
+        background-color: #c0392b;
+    }
+
+    .btn-proses:hover {
+        background-color: #d35400;
+    }
+
+    @media (max-width: 768px) {
+    .sidebar {
+        width:40 px;
+    }
+
+    /* .sidebar .menu-item span,
+    .sidebar .profile {
+        display: none;
+    } */
+
+    .main-content {
+        margin-left: 40px;
+    }
+    }
+
+    .sidebar, .sidebar.collapsed, .main-content, .main-content.expanded {
+        transition: none !important;
+    }
+
+    /* Styling Popup Logout */
+
+    /* Styling Popup Logout */
+    #logout-popup {
+        display: none; /* WAJIB supaya popup tersembunyi di awal */
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    #logout-popup .popup-content {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        width: 300px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    #logout-popup p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    #logout-popup .confirm-logout {
+        padding: 10px 20px ;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        margin-right: 10px;
+        transition: background-color 0.3s ease;
+    }
+
+    #logout-popup .cancel-logout {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        margin-right: 10px;
+        transition: background-color 0.3s ease;
+    }
+
+
+    #confirm-logout {
+        background: #e74c3c;
+    }
+
+    #confirm-logout:hover {
+        background: #c0392b;
+    }
+
+    #cancel-logout {
+        background: #95a5a6;
+        margin-right: 0;
+    }
+
+    #cancel-logout:hover {
+        background: #7f8c8d;
+    }

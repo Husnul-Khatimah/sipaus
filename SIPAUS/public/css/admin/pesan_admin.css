@@ -1,0 +1,14 @@
+/*
+ * File: public/css/pesan_admin.css
+ * Deskripsi: Gaya CSS spesifik untuk halaman Pesan ATK Admin.
+ * Dimuat melalui @push('styles') di pesan_atk_admin.blade.php.
+ * SEMUA GAYA UMUM SUDAH ADA DI admin_common.css.
+ * HANYA TULIS GAYA YANG UNIK UNTUK HALAMAN INI DI SINI.
+ */
+
+/* Contoh: Jika ada style khusus untuk input-input form pesan ATK yang override admin_common.css */
+/* #nama-supplier-input, #nama-barang-input, #jumlah-pesan-input, #tanggal-pesan-input {
+    border: 2px dashed blue;
+} */
+
+/* Jika tidak ada style yang sangat spesifik dan unik, file ini boleh KOSONG. */

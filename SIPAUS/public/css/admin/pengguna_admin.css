@@ -1,0 +1,24 @@
+/*
+ * File: public/css/pengguna_admin.css
+ * Deskripsi: Gaya CSS spesifik untuk halaman Pengguna Admin.
+ * Dimuat melalui @push('styles') di pengguna_admin.blade.php.
+ * SEMUA GAYA UMUM SUDAH ADA DI admin_common.css.
+ * HANYA TULIS GAYA YANG UNIK UNTUK HALAMAN INI DI SINI.
+ */
+
+/* Contoh: Jika dropdown #Rool butuh style yang sangat spesifik berbeda dari .input-form select di common.css */
+/*#Rool {
+    /* padding: 10px; */
+    /* font-size: 14px; */
+    /* border: 1px solid #ddd; */
+    /* border-radius: 5px; */
+    /* background-color: #fff; */
+    /* color: #333; */
+/*}
+
+/* Jika ada style tabel khusus untuk tabel Pengguna yang override admin_common.css */
+/* .dashboard-box table#tabel-pengguna th {
+    background-color: #007bff;
+} */
+
+/* Jika tidak ada style yang sangat spesifik dan unik, file ini boleh KOSONG. */

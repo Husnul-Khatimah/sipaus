@@ -1,0 +1,15 @@
+/*
+ * File: public/css/permintaan_admin.css
+ * Deskripsi: Gaya CSS spesifik untuk halaman Permintaan Admin.
+ * Dimuat melalui @push('styles') di permintaan_admin.blade.php.
+ * SEMUA GAYA UMUM SUDAH ADA DI admin_common.css.
+ * HANYA TULIS GAYA YANG UNIK UNTUK HALAMAN INI DI SINI.
+ */
+
+/* Contoh: Jika Anda ingin tombol Setujui/Tolak di halaman ini memiliki warna atau hover yang berbeda dari common.css */
+/* .btn-view { background-color: #28a745; } */
+/* .btn-view:hover { background-color: #218838; } */
+/* .btn-view1 { background-color: #dc3545; } */
+/* .btn-view1:hover { background-color: #c82333; } */
+
+/* Jika tidak ada style yang sangat spesifik dan unik, file ini boleh KOSONG. */
